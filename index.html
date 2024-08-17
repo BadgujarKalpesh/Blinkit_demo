@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+
+    <!-- Main Nav Bar -->
+
+    <nav class="bg-light border-bottom px-4 py-2 d-flex justify-content-between align-items-center">
+        <a href="/">
+            <svg width="134" height="30" viewBox="0 0 114 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M14.3342 7.186C16.2619 7.186 17.9832 7.66644 19.4978 8.62732C21.0262 9.57447 22.2242 10.9197 23.0917 12.663C23.9316 14.3377 24.3516 16.3075 24.3516 18.5724C24.3516 20.7687 23.9316 22.7316 23.0917 24.4612C22.2517 26.1908 21.0675 27.5429 19.5391 28.5175C17.9969 29.5058 16.2619 30 14.3342 30C12.9297 30 11.6078 29.7117 10.3685 29.1352C9.12927 28.5587 8.06901 27.7488 7.18775 26.7056V29.4852H0V0H7.18775V10.4598C8.06901 9.41661 9.12927 8.61359 10.3685 8.05079C11.6078 7.47426 12.9297 7.186 14.3342 7.186ZM12.1861 24.0494C13.2051 24.0494 14.1139 23.8161 14.9125 23.3493C15.7112 22.8826 16.3377 22.2306 16.7921 21.3933C17.2465 20.5697 17.4737 19.6294 17.4737 18.5724C17.4737 17.5429 17.2465 16.6095 16.7921 15.7721C16.3377 14.9348 15.7112 14.2828 14.9125 13.8161C14.1139 13.3493 13.2051 13.116 12.1861 13.116C11.2223 13.116 10.3617 13.3493 9.60432 13.8161C8.84699 14.269 8.2549 14.9073 7.82804 15.731C7.40118 16.5683 7.18775 17.5154 7.18775 18.5724C7.18775 19.6294 7.40118 20.5765 7.82804 21.4139C8.2549 22.2375 8.84699 22.8826 9.60432 23.3493C10.3617 23.8161 11.2223 24.0494 12.1861 24.0494Z"
+                    fill="#F8CB46"></path>
+                <path d="M25.3356 29.4852V0H32.5233V29.4852H25.3356Z" fill="#F8CB46"></path>
+                <path d="M34.5607 29.4852V7.68016H41.7071V29.4852H34.5607Z" fill="#F8CB46"></path>
+                <path
+                    d="M57.2319 7.186C58.7603 7.186 60.1372 7.5429 61.3627 8.25669C62.5882 8.95676 63.5521 9.94509 64.2544 11.2217C64.9291 12.512 65.2664 13.9739 65.2664 15.6074V29.4852H58.4092V17.2135C58.4092 16.4173 58.2508 15.7104 57.9341 15.0927C57.6312 14.4612 57.1974 13.9739 56.6329 13.6307C56.0821 13.2876 55.4349 13.116 54.6914 13.116C53.9891 13.116 53.3419 13.2876 52.7498 13.6307C52.1577 13.9602 51.6965 14.4132 51.366 14.9897C51.0218 15.5388 50.8496 16.1839 50.8496 16.9252L50.8083 29.4852H43.6619V7.68016H50.8083V10.1716C51.483 9.23816 52.3849 8.51064 53.5141 7.98902C54.6432 7.45367 55.8824 7.186 57.2319 7.186Z"
+                    fill="#F8CB46"></path>
+                <path
+                    d="M81.0597 17.2135L89.1769 29.4852H81.0597L76.3091 21.7639L74.1198 24.2965V29.4852H66.932V0H74.1198V16.2869L81.0184 7.68016H89.1356L81.0597 17.2135Z"
+                    fill="#F8CB46"></path>
+                <path d="M34.5569 0.00232667H41.7267V5.59207H34.5569V0.00232667Z" fill="#F8CB46"></path>
+                <path d="M90.3176 29.4198V7.61479H97.464V29.4198H90.3176Z" fill="#54B226"></path>
+                <path
+                    d="M112.575 23.2634L114 27.855C113.353 28.4727 112.534 28.9737 111.542 29.3581C110.564 29.7424 109.607 29.9346 108.671 29.9346C107.322 29.9346 106.117 29.6395 105.057 29.0492C103.996 28.4452 103.17 27.6079 102.578 26.5372C101.986 25.494 101.69 24.2929 101.69 22.9339V13.3183H98.819V7.61479H101.69V0.00241089H108.547V7.61479H113.071V13.3183H108.547V21.6161C108.547 22.3162 108.733 22.8859 109.105 23.3251C109.477 23.7644 109.952 23.984 110.53 23.984C110.943 23.984 111.329 23.9223 111.687 23.7987C112.045 23.6752 112.341 23.4967 112.575 23.2634Z"
+                    fill="#54B226"></path>
+                <path d="M90.2609 0.00241089H97.4307V5.59215H90.2609V0.00241089Z" fill="#54B226"></path>
+            </svg>
+        </a>
+
+        <div class="vertical-line"></div>
+
+        <div class="location">
+            <h5>Delivery in 12 minutes</h5>
+            <p>Sector 9, Gurugram, Haryana 12...<i class="fa-solid fa-caret-down"></i></p>
+        </div>
+        <div class="search-div">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search 'bread'" class="search-input" />
+        </div>
+        <button class="nav-btns btn btn-lg">Login</button>
+        <button class="nav-btns btn btn-lg btn-success rounded-4 px-3 py-3 my-cart">
+            <i class="fa-solid fa-cart-shopping"></i> My Cart
+        </button>
+    </nav>
+
+
+    <!-- Product Nav bar -->
+
+    <div id="sd-location">
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>
+            <a>Grocery & Staples</a>
+        </div>
+        <div>
+            <a>Vegetables & fruits</a>
+        </div>
+        <div>
+            <a>Personal Care</a>
+        </div>
+        <div>
+            <a>Cold drinks & juices</a>
+        </div>
+        <div>
+            <a>household items</a>
+        </div>
+        <div>
+            <a>noodles, sauces & instant food</a>
+        </div>
+        <div>
+            <a>bakery & biscuits</a>
+        </div>
+
+        <div>
+            <select style="border: none;">
+                <option value="">More</option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+            </select>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+    </div>
+
+
+    <!-- Product data side navbar -->
+
+    <div id="sd-container">
+        <div id="sd-left">
+            <div id="sd-selected">
+                <a>Vegetables & Fruits</a>
+            </div>
+            <div>
+                <a> Organic & Hydroponic</a>
+            </div>
+            <div>
+                <a>Exotics</a>
+            </div>
+            <div>
+                <a>Fruits</a>
+            </div>
+            <div>
+                <a>Vegetables</a>
+            </div>
+            <div>
+                <a>Freshly cut & Sprouts</a>
+            </div>
+        </div>
+        <div id="sd-right">
+            <div id="sd-sort">
+                <div>
+                    <div>
+                        <p>Home > Vegetables & Fruits</p>
+                        <b> Vegetables & Fruits</b>
+                    </div>
+                </div>
+                <div id="sd-selectDiv">
+                    <span>Sort by</span>
+                    <select name="" id="sd-select">
+                        <option value="">Relevance</option>
+                        <option value="low">Price(Low to High)</option>
+                        <option value="high">Price(High to Low)</option>
+                        <option value="dis">Discount(High to Low)</option>
+                        <option value="name">Name(A to Z)</option>
+                    </select>
+                </div>
+            </div>
+            <div id="sd-showdata"></div>
+        </div>
+    </div>
+
+
+    <!-- fotter -->
+
+    <div id="center">
+        <div id="footer_head">
+            <div class="head">
+                <h2>We deliver everything in 10 minutes</h2>
+                <p>blinkit (formerly Grofers) is India's fastest online shopping platform. Get fresh groceries and much
+                    more delivered online instantly.</p>
+            </div>
+            <div class="head">
+                <h2> Single app for all your daily needs</h2>
+                <p>Order thousands of products at just a tap: milk, eggs, bread, cooking oil, ghee, atta, rice, fresh
+                    fruits and vegetables, spices, fresh meat, seafood, frozen veg and non-veg food, chocolates, chips,
+                    biscuits, maggi, cold
+                    drinks, shampoos, soaps, body wash, pet food, diapers, electronics,
+                    sanitizers, masks, sanitary napkins, health products, hygiene products, organic products and gourmet
+                    products, and much more from your neighbourhood stores.
+                </p>
+            </div>
+            <div class="head">
+                <h2>Available in following cities</h2>
+                <p>The delivery service is operational in Agra, Ahmedabad, Aligarh, Allahabad, Bengaluru, Bhiwadi,
+                    Bijnor, Chandigarh, Chennai, Delhi, Durgapur, Faridabad, Gauriganj, Gonda, Gurugram, Guwahati,
+                    Hisar, Hyderabad, Jaipur,<br>
+                    Jamshedpur, Kanpur, Kolkata, Kota, Lucknow, Mathura, Meerut, Mohali, Moradabad, Mumbai, Noida,
+                    Panchkula, Panipat, Pune, Raebareli, Rohtak, Sonipat, Vadodara, Zirakpur
+                </p>
+            </div>
+        </div>
+        <div id="four_col">
+            <div class="col">
+                <div class="img">
+                    <img src="https://blinkit.com/images/home/express-delivery-icon-93fce76.png" alt="">
+                </div>
+                <div class="info">
+                    <h2>10 minute grocery now</h2>
+                    <p>Get your order delivered to your doorstep at the earliest from dark stores near you.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="img">
+                    <img src="https://blinkit.com/images/home/footer-best-price-icon-90b5bd7.png" alt="">
+                </div>
+                <div class="info">
+                    <h2>Best Prices & Offers
+                    </h2>
+                    <p>Cheaper prices than your local supermarket, great cashback offers to top it off.
+                    </p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="img">
+                    <img src="https://blinkit.com/images/home/footer-genuine-products-icon-d2756ce.png" alt="">
+                </div>
+                <div class="info">
+                    <h2>Wide Assortmen</h2>
+                    <p>Choose from 5000+ products across food, personal care, household & other categories.
+                    </p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="img">
+                    <img src="https://blinkit.com/images/home/footer-easy-returns-icon-02b777e.png" alt="">
+                </div>
+                <div class="info">
+                    <h2>Easy Returns</h2>
+                    <p>Not satisfied with a product? Return it at the doorstep & get a refund within hours.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="middle">
+            <div id="left">
+                <div class="title">
+                    <p>Categories</p>
+                </div>
+                <div id="left_div_list">
+                    <div id="left_list">
+                        <ul class="list">
+                            <a href="">
+                                <li>grocery & staples</li>
+                            </a>
+                            <a href="">
+                                <li>household items</li>
+                            </a>
+                            <a href="">
+                                <li>bakery & biscuits</li>
+                            </a>
+                            <a href="">
+                                <li>cold drink & juices</li>
+                            </a>
+                            <a href="">
+                                <li>sweet tooth</li>
+                            </a>
+                            <a href="">
+                                <li>pharma & baby care</li>
+                            </a>
+                            <a href="">
+                                <li>egg ,meat & fish</li>
+                            </a>
+                            <a href="">
+                                <li>battery, buib & accesories</li>
+                            </a>
+                            <a href="">
+                                <li>Home furnishing</li>
+                            </a>
+                            <a href="">
+                                <li>Stationery needs</li>
+                            </a>
+                            <a href="">
+                                <li>best value</li>
+                            </a>
+                            <a href="">
+                                <li>ocassion,festival</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div id="right_list">
+                        <ul class="list">
+                            <a href="">
+                                <li>vegetable & foods</li>
+                            </a>
+                            <a href="">
+                                <li>noodle ,sauses & accesories</li>
+                            </a>
+                            <a href="">
+                                <li>personal care</li>
+                            </a>
+                            <a href="">
+                                <li>tea,coffee & health drinks</li>
+                            </a>
+                            <a href="">
+                                <li>munchies</li>
+                            </a>
+                            <a href="">
+                                <li>daily bread & eggs</li>
+                            </a>
+                            <a href="">
+                                <li>frozen food</li>
+                            </a>
+                            <a href="">
+                                <li>cleaning & bathroom essentials</li>
+                            </a>
+                            <a href="">
+                                <li>kithen & dining needs</li>
+                            </a>
+                            <a href="">
+                                <li>pet care</li>
+                            </a>
+                            <a href="">
+                                <li>lowest price</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="right">
+                <div class="first">
+                    <div class="title">
+                        <p>company</p>
+                    </div>
+                    <div class="right_list">
+                        <ul>
+                            <a href="">
+                                <li>About</li>
+                            </a>
+                            <a href="">
+                                <li>career</li>
+                            </a>
+                            <a href="">
+                                <li>blog</li>
+                            </a>
+                            <a href="">
+                                <li>press</li>
+                            </a>
+                            <a href="">
+                                <li>lead</li>
+                            </a>
+                            <a href="">
+                                <li>value</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="second">
+                    <div class="title">
+                        <p>For consumers</p>
+                    </div>
+                    <div class="right_list">
+                        <ul>
+                            <a href="">
+                                <li>Privacy</li>
+                            </a>
+                            <a href="">
+                                <li>Terms</li>
+                            </a>
+                            <a href="">
+                                <li>Faq</li>
+                            </a>
+                            <a href="">
+                                <li>secuirity</li>
+                            </a>
+                            <a href="">
+                                <li>mobile</li>
+                            </a>
+                            <a href="">
+                                <li>contract</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="third">
+                    <div class="title">
+                        <p>For Partner</p>
+                    </div>
+                    <div class="right_list">
+                        <ul>
+                            <a href="">
+                                <li>Partner</li>
+                            </a>
+                            <a href="">
+                                <li>Express</li>
+                            </a>
+                            <a href="">
+                                <li>Local</li>
+                            </a>
+                            <a href="">
+                                <li>spotlight</li>
+                            </a>
+                            <a href="">
+                                <li>warehouse</li>
+                            </a>
+                            <a href="">
+                                <li>deliver</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="icon">
+            <div id="left_icon">
+                <span>Follow us</span>
+                <ul>
+                    <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                    <a href="" class="blinkit_care">
+                        <span><i class="fa fa-twitter-square" aria-hidden="true"></i></span>
+                        <span>@blinkitcares</span>
+                    </a>
+                    <a href="" class="blinkit_care">
+                        <span><i class="fa fa-twitter-square" aria-hidden="true"></i></span>
+                        <span>@blinkiteng</span>
+                    </a>
+                </ul>
+            </div>
+            <div id="right_icon">
+                <span>Download app</span>
+                <div id="right_img">
+                    <img src="https://blinkit.com/images/home/google-play_1x-0c7086a.png" alt="">
+                    <img src="https://blinkit.com/images/home/app-store_1x-cbeb7ea.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="brands">
+            <h3>Brands available on blinkit (formerly grofers)</h3>
+            <p>grofers Happy Day grofers Happy Home grofers Mother's Choice g Fresh O'range Savemore24 MantraAashirvaad
+                Act II
+                Amul Axe Bambino Best Value Bingo Bisleri Boost Bournvita Britannia Brooke Bon Bru Cadbury Cheetos
+                Cinthol Closeup
+                Coca-Cola Colgate Dabur Danone Del Monte Dettol Dhara Dove Durex English Oven Everest Fiama Di Wills
+                Garnier Gatorade Gillette
+                Glucon-D Grocery Gowardhan Hajmola Haldiram's Head & Shoulders Heinz Himalaya Horlicks India
+                GateKellogg's Kinley Kissan
+                Knorr L'Oreal Lay's Lijjat Limca Lipton Maggi Madhur McCain MDH Minute Maid Mirinda Mother Dairy
+                Mountain Dew MTR
+                Nescafe Nestle Nivea Nutella Oral-B Oreo Palmolive Pantene Paper Boat Parachute
+                Parle Patanjali Pears Pepsi Pepsodent Pillsbury PrincewareRajdhani Real Red Bull Safal Saffola Shakti
+                Bhog Smith & Jones Sprite StayfreeSundrop
+                Sunfeast
+                Sunsilk
+            </p>
+        </div>
+        <div id="payment_partner">
+            <h3>Payment partners</h3>
+            <div id="payment_gateway">
+                <img src="https://blinkit.com/images/payment/mobikwik-c96e507.png" alt="">
+                <img src="https://blinkit.com/images/payment/paytm-b393728.png" alt="">
+                <img src="https://blinkit.com/images/payment/visa-95f2100.png" alt="">
+                <img src="https://blinkit.com/images/payment/mastercard-01e540b.png" alt="">
+                <img src="https://blinkit.com/images/payment/maestro-e164fe0.png" alt="">
+                <img src="https://blinkit.com/images/payment/rupay-39478ad.png" alt="">
+                <img src="https://blinkit.com/images/payment/amex-fdda4b1.png" alt="">
+                <img src="https://blinkit.com/images/payment/sodexo-82f2019.png" alt="">
+                <img src="https://blinkit.com/images/payment/bhim-upi-02aef45.png" alt="">
+                <span>Net Banking</span>
+                <span>Cash on delivery</span>
+                <span>Grofers cash</span>
+            </div>
+        </div>
+        <div id="service">
+            "Blinkit (formerly Grofers)" is owned & managed by "Grofers India Private Limited” and is not related,
+            linked or interconnected in whatsoever manner or nature, to “GROFFR.COM” which is a real estate
+            services business operated by “Redstone Consultancy Services Private Limited”.
+        </div>
+        <div id="policy">
+            By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content
+            Policies. All trademarks are properties of their
+            respective owners. 2016-2021 © Grofers India Pvt Ltd. All rights reserved.
+        </div>
+    </div>
+
+</body>
+
+<script>
+
+    async function veg_data() {
+        let veg_arr = [
+            {
+                cat: "veg",
+                image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/3889a.jpg",
+                name: "Coriander Bunch",
+                price: "4",
+                wt: "100 g",
+            },
+            {
+                cat: "veg",
+                image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/3881a.jpg",
+                name: "Local Carrot (Gajar)",
+                price: "15",
+                wt: "500 g",
+            },
+            {
+                cat: "veg",
+
+                image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/391306a.jpg",
+                name: "Onion 1 kg",
+                price: "39",
+                wt: "500 g",
+            },
+            {
+                cat: "veg",
+
+                image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/423735a.jpg",
+                name: "Green Chilli",
+                price: "6",
+                wt: "100 g",
+            },
+            {
+                cat: "veg",
+
+                image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/3923a.jpg",
+                name: "Green Peas",
+                price: "12",
+                wt: "250 g",
+            },
+            {
+                cat: "veg",
+
+                image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/421703a.jpg",
+                name: "Ginger (Adrak)",
+                price: "10",
+                wt: "250 g",
+            },
+            {
+                cat: "veg",
+
+                image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/438111a.jpg",
+                name: "Fenugreek (Methi) - Fresh",
+                price: "6",
+                wt: "250 g",
+            },
+            {
+                cat: "veg",
+
+                image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/3888a.jpg",
+                name: "Green Capsicum",
+                price: "19",
+                wt: "250 g",
+            },
+            {
+
+                cat: "fruits",
+                image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/470636a.jpg",
+                name: "Banana",
+                price: "21",
+                wt: "3 units",
+            },
+            {
+                cat: "veg",
+
+                image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/10088a.jpg",
+                name: "Cucumber (Kheera)",
+                price: "19",
+                wt: "500 g - 600 g",
+            },
+            {
+
+                cat: "fruits",
+                image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/439699a.jpg",
+                name: "Lemon",
+                price: "13",
+                wt: "250 g - 300 g",
+            },
+            {
+                cat: "veg",
+
+                image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/391305a.jpg",
+                name: "Potato",
+                price: "23",
+                wt: "1 kg",
+            },
+            {
+                cat: "veg",
+
+                image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/421744a.jpg",
+                name: "Spring Onion",
+                price: "12",
+                wt: "150g - 200g",
+            },
+            {
+                cat: "veg",
+
+                image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/421747a.jpg",
+                name: "Radish",
+                price: "12",
+                wt: "500 g",
+            },
+           
+        ];
+
+        const container = document.getElementById("sd-showdata");
+        container.innerHTML = ""; // Clear any existing content
+
+        veg_arr.forEach((item) => {
+            const productDiv = document.createElement("div");
+            productDiv.classList.add("product-card");
+
+            productDiv.innerHTML = `
+        <div class = "cart-style">
+          <img src="${item.image}" alt="${item.name}" class="product-image"/>
+          <h5 class="product-name">${item.name}</h5>
+          <p class="product-weight">${item.wt}</p>
+          <div class="price-div">
+            <p class="product-price">Price: ₹${item.price} </p>
+            <button class="btn-style">Add</button>
+          </div>
+        </div>
+        `;
+
+            container.appendChild(productDiv);
+        });
+    }
+  
+    veg_data();
+</script>
+
+
+</html>
